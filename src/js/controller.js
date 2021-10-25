@@ -71,6 +71,10 @@ const controlServings = function (newServings) {
   // update
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+
 const controlAddBookmark = function () {
   //Add/remove to bookmark
   model.state.recipe.bookmarked
@@ -130,5 +134,6 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   resultsView.addHandlerSortRecipes(controlSortRecipes);
+  newFeature();
 };
 init();
