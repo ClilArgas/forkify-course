@@ -8,9 +8,9 @@ import paginationView from './views/paginationView.js';
 import bookmarkView from './views/bookmarkView.js';
 import addRecipeView from './views/addRecipeView.js';
 import { MODEL_CLOSE_SEC } from './config.js';
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 const controllRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -69,10 +69,6 @@ const controlServings = function (newServings) {
   recipeView.update(model.state.recipe);
   // devide each ing by the serving
   // update
-};
-
-const newFeature = function () {
-  console.log('Welcome to the application');
 };
 
 const controlAddBookmark = function () {
@@ -134,6 +130,5 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   resultsView.addHandlerSortRecipes(controlSortRecipes);
-  newFeature();
 };
 init();
